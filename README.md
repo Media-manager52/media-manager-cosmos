@@ -1,0 +1,61 @@
+# Media Manager — Cosmos Cloud market listing
+
+This public repository is the Cosmos Cloud marketplace listing for **Media Manager**.
+The application source is maintained separately; this repository exists so Cosmos can
+resolve the public listing, install template and icon.
+
+## Install from the custom source
+
+In Cosmos Cloud open **Market → Sources**, add a source named **Media Manager** with:
+
+```text
+https://raw.githubusercontent.com/Media-manager52/media-manager-cosmos/main/index.json
+```
+
+Then open **Market → Media Manager → Install**. The installer asks for your movie and TV
+library folders, the AltMount parent folder, the existing media network, and optional
+Plex/Newznab/TMDB credentials. It creates the API, UI and PostgreSQL services, plus the
+UI, `/api` and `/health` routes on one host. The `/api` route injects the owner token
+server-side.
+
+If you want the built-in Cosmos market instead of a custom source, the same app is
+submitted to `azukaar/cosmos-servapps-official`; once accepted it appears without adding
+a source.
+
+## Requirements
+
+- Cosmos Cloud 0.23.4 or newer.
+- AltMount (Usenet acquisition) and Plex.
+- At least one Newznab-compatible indexer.
+- A TMDB API read access token (recommended).
+- A Docker network shared with AltMount, Plex and Seerr (default `media-stack`).
+- Host folders for movies, TV, AltMount's parent mount and encrypted backups.
+
+## Images
+
+The API and UI images are public:
+
+```text
+registry.gitlab.com/66bvh8pajgq3hqw2eukb/media-manager-market/media-manager-api:latest
+registry.gitlab.com/66bvh8pajgq3hqw2eukb/media-manager-market/media-manager-ui:latest
+```
+
+They are built for `linux/amd64`.
+
+## After install
+
+1. Open the installed Media Manager app from Cosmos (Cosmos OpenID handles the login).
+2. Add **AltMount** under Sources → Download clients.
+3. Add **Plex** under Settings → Connections.
+4. Add and commission a **Newznab** indexer under Sources → Indexers.
+5. Add a library root and quality profile, then add a title.
+6. Optional: configure Seerr, off-site backups and more metadata providers.
+
+The owner token is in the install form (and in the API service environment). It is
+injected only by the Cosmos `/api` route; do not expose the API port.
+
+## Licensing
+
+The Media Manager application source is private. This listing repository and the
+published container images are provided for installing and using Media Manager with
+Cosmos Cloud. All rights reserved.
