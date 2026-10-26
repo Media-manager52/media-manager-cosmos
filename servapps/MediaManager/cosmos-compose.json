@@ -98,7 +98,7 @@
   "minVersion": "0.23.4",
   "services": {
     "{ServiceName}": {
-      "image": "registry.gitlab.com/66bvh8pajgq3hqw2eukb/media-manager-market/media-manager-ui:latest",
+      "image": "ghcr.io/media-manager52/media-manager-ui:latest",
       "container_name": "{ServiceName}",
       "restart": "unless-stopped",
       "depends_on": {
@@ -178,7 +178,7 @@
       ]
     },
     "{ServiceName}-api": {
-      "image": "registry.gitlab.com/66bvh8pajgq3hqw2eukb/media-manager-market/media-manager-api:latest",
+      "image": "ghcr.io/media-manager52/media-manager-api:latest",
       "container_name": "{ServiceName}-api",
       "restart": "unless-stopped",
       "user": "{Context.mediaUid}:{Context.mediaGid}",

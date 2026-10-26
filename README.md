@@ -36,8 +36,8 @@ Once accepted it appears without adding a source.
 The API and UI images are public:
 
 ```text
-registry.gitlab.com/66bvh8pajgq3hqw2eukb/media-manager-market/media-manager-api:latest
-registry.gitlab.com/66bvh8pajgq3hqw2eukb/media-manager-market/media-manager-ui:latest
+ghcr.io/media-manager52/media-manager-api:latest
+ghcr.io/media-manager52/media-manager-ui:latest
 ```
 
 They are built for `linux/amd64`.
