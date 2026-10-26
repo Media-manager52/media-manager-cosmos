@@ -98,7 +98,7 @@
   "minVersion": "0.23.4",
   "services": {
     "{ServiceName}": {
-      "image": "ghcr.io/media-manager52/media-manager-ui:latest",
+      "image": "ghcr.io/media-manager52/media-manager-ui:main",
       "container_name": "{ServiceName}",
       "restart": "unless-stopped",
       "depends_on": {
@@ -178,7 +178,7 @@
       ]
     },
     "{ServiceName}-api": {
-      "image": "ghcr.io/media-manager52/media-manager-api:latest",
+      "image": "ghcr.io/media-manager52/media-manager-api:main",
       "container_name": "{ServiceName}-api",
       "restart": "unless-stopped",
       "user": "{Context.mediaUid}:{Context.mediaGid}",
