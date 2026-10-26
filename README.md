@@ -19,8 +19,8 @@ UI, `/api` and `/health` routes on one host. The `/api` route injects the owner 
 server-side.
 
 If you want the built-in Cosmos market instead of a custom source, the same app is
-submitted to `azukaar/cosmos-servapps-official`; once accepted it appears without adding
-a source.
+submitted to `azukaar/cosmos-servapps-official`: [PR #336](https://github.com/azukaar/cosmos-servapps-official/pull/336).
+Once accepted it appears without adding a source.
 
 ## Requirements
 
