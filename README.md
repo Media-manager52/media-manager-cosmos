@@ -33,14 +33,22 @@ Once accepted it appears without adding a source.
 
 ## Images
 
-The API and UI images are public:
+The API and UI images come from the canonical application project
+(`https://github.com/Media-manager52/Media-manager`) via GHCR:
 
 ```text
 ghcr.io/media-manager52/media-manager-api:main
 ghcr.io/media-manager52/media-manager-ui:main
 ```
 
-They are built for `linux/amd64`.
+They are built for `linux/amd64`. If a pull fails, the GHCR packages may still be
+private; make them public once at:
+
+- https://github.com/users/Media-manager52/packages/container/media-manager-api/settings
+- https://github.com/users/Media-manager52/packages/container/media-manager-ui/settings
+
+The project's publish workflow sets both packages public after a successful main
+publish.
 
 ## After install
 
